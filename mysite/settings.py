@@ -29,6 +29,11 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = ["http://*.pythonanywhere.com", "https://*.pythonanywhere.com"]
 
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # This is the important line
+
 # Application definition
 
 INSTALLED_APPS = [
